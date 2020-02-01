@@ -1,0 +1,11 @@
+{% extends 'testapp/base.html' %}
+{% block title %} Department List {% endblock %}
+{% block content %}
+
+<h1> Department List </h1>
+
+{% for data in get_department %}
+    <div> <a href="{% url 'department' slug='details' id=data.pk %}"> {{ data.dept_name }}</a> </div>
+{% endfor %}    
+
+{% endblock %}

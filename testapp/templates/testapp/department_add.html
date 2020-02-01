@@ -1,0 +1,10 @@
+{% extends 'testapp/base.html' %}
+{% block title %} Department Add {% endblock %}
+{% block content %}
+
+    <form method="POST"> {% csrf_token %}
+        <input type="text" name="dept_name">
+        <input type="submit" value="Submit">
+    </form>
+
+{% endblock %}

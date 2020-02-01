@@ -1,0 +1,18 @@
+<html>
+    <head>
+        {% load static %}
+        <title>{% block title %} Home | Django Project {% endblock %}</title>
+    </head>
+    <body>
+        <div style="background: gray;min-height:600px;">
+            <div>
+                <ul>
+                    <li><a href="{% url 'dashboard' %}">Dashboard</a></li>
+                    <li><a href="{% url 'department' slug='list' %}">Department List</a></li>
+                </ul>
+            </div>
+
+            {% block content %} {% endblock %}
+        </div>
+    </body>
+</html>

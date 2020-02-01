@@ -1,0 +1,10 @@
+{% extends 'testapp/base.html' %}
+{% block title %} Department Details {% endblock %}
+{% block content %}
+
+{% for data in get_department %}
+    <div> Department Name: {{ data.dept_name }} </div>
+    <div> Added Date: {{ data.creatAt }} </div>
+{% endfor %}    
+
+{% endblock %}
